@@ -1,0 +1,27 @@
+<h1 style="text-align: center; background-color: aquamarine;">listado works!</h1>
+<h1>---------------------------------------------------------------------------------------------------------------------------------------
+</h1>
+<div style="display: flex;justify-content: center;">
+   
+    <div style=" align-self: center; background-color: coral" >
+        <h1>Heroes</h1>
+        
+        <ul>
+            <li *ngFor="let superhero of heroes; let i=index">{{i+1}}-{{superhero}}</li>
+        </ul>
+
+        <button (click)="(borrarHeroe())">Borrar Heroe</button>
+
+        <p *ngIf="heroeBorrado else noBorrado" style="align-self: center">Heroe Borrado : {{heroeBorrado}}</p>
+
+        <ng-template #noBorrado >
+           <p> no ha borrado nada</p>
+
+        </ng-template>
+        <!-- <p *ngIf="!heroeBorrado" style="align-self: center">no ha borrado nada</p> -->
+
+    </div>    
+
+</div>
+<h1>---------------------------------------------------------------------------------------------------------------------------------------
+</h1>
